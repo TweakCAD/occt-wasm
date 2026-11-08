@@ -1187,6 +1187,9 @@ static void buildSweep(BRepOffsetAPI_MakePipeShell& maker, const TopoDS_Shape& p
             maker.SetMode(TopoDS::Wire(*setup.auxSpine), setup.curvilinearEquivalence, contact);
             break;
         }
+        case 4:
+            maker.SetMode(gp::XOY());
+            break;
         default:
             throw std::runtime_error(op + ": invalid mode");
         }

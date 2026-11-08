@@ -149,6 +149,18 @@ describe("extrudeWithHistory", () => {
     });
 });
 
+describe("SweepMode.Parallel", () => {
+    it("keeps the section at one orientation along a slanted spine", () => {
+        const section = polygon([p(-2, -2, 0), p(2, -2, 0), p(2, 2, 0), p(-2, 2, 0)]);
+        const spine = polyline([p(0, 0, 0), p(5, 0, 20)]);
+        const evo = kernel.sweepWithHistory(section, spine, [], BOUND, { mode: 4 });
+        expect(kernel.getVolume(evo.result)).toBeCloseTo(16 * 20, 6);
+        const box = kernel.getBoundingBox(evo.result);
+        expect(box.zmin).toBeCloseTo(0, 6);
+        expect(box.zmax).toBeCloseTo(20, 6);
+    });
+});
+
 describe("revolveWithHistory", () => {
     const profile = (): ShapeHandle =>
         kernel.makeFace(polygon([p(5, 0, 0), p(8, 0, 0), p(8, 0, 4), p(5, 0, 4)]));
