@@ -1,6 +1,6 @@
 {
-  "name": "occt-wasm",
-  "version": "5.16.0",
+  "name": "@tweakcad/occt-wasm",
+  "version": "5.16.0-tweakcad.1",
   "description": "OpenCascade (OCCT) compiled to WebAssembly with a clean TypeScript API",
   "type": "module",
   "exports": {
@@ -38,9 +38,12 @@
     "step",
     "gltf"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andymai/occt-wasm.git",
+    "url": "git+https://github.com/TweakCAD/occt-wasm.git",
     "directory": "ts"
   },
   "license": "MIT OR Apache-2.0",
