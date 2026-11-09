@@ -65,6 +65,7 @@ jobs:
           cd ts
           npm run build
           cp ../dist/occt-wasm.js ../dist/occt-wasm.wasm dist/
+          mkdir -p ../package
           npm pack --pack-destination ../package
 
       - name: Test
