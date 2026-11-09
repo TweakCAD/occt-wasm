@@ -110,4 +110,4 @@ jobs:
             echo "::notice::@tweakcad/occt-wasm@$version is already on npm; nothing published"
             exit 0
           fi
-          npm publish package/*.tgz --provenance --access public --tag latest
+          npm publish ./package/*.tgz --provenance --access public --tag latest
