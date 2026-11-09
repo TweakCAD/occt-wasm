@@ -1,6 +1,6 @@
 {
   "name": "@tweakcad/occt-wasm",
-  "version": "5.17.0-tweakcad.2",
+  "version": "5.17.0-tweakcad.3",
   "description": "OpenCascade (OCCT) compiled to WebAssembly with a clean TypeScript API",
   "type": "module",
   "exports": {
